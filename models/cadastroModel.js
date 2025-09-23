@@ -1,7 +1,7 @@
 module.exports = class CadastroModel {
     constructor() {}
 
-    isRegistered() {
+    signIn() {
         return "Veículo Registrado"
     }
 }

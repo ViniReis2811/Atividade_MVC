@@ -1,8 +1,8 @@
 const cadastroModel = require('../models/cadastroModel')
 
 const cadastro = new cadastroModel()
-const cadastrado = cadastro.isRegistered()
+const cadastrado = cadastro.signIn()
 
-exports.getIsRegistered = ((req,res) => {
+exports.getSignIn = ((req,res) => {
     res.render("CadastroView", {cadastrado : cadastrado});
 });
