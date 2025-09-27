@@ -1,7 +1,22 @@
 module.exports = class CadastroModel {
-    constructor() {}
+    vehicles = [];
 
-    signIn() {
-        return "Veículo Registrado"
+    constructor(name){
+        this.name = name;
     }
+
+    signIn(name) {
+        let vehicle = new CadastroModel(name);
+        this.vehicles.push(vehicle);
+    }
+
+    ListAll() {
+        return this.vehicles;
+    }
+
+    Delete(id) {
+        const index = this.vehicles.findIndex((x) => x.id == id);
+        this.vehicles.splice(index, 1);
+    }
+    
 }
