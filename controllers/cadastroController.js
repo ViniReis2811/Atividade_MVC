@@ -8,17 +8,17 @@ exports.Get = (req,res) => {
 
 exports.Save = (req,res) => {
     var result = cadastro.signIn(req.body.name)
-    res.render("cadastroView", {saved: true})
+    res.render("cadastroView", {cadastro: result})
 };
 
 exports.getVehicles = (req,res) => {
     var result = cadastro.ListAll()
-    res.render("formView", {vehicles: result});
+    res.render("listView", {vehicles: result});
 };
 
 exports.Delete = (req,res) => {
     let {id} = req.params;
     cadastro.Delete(id);
     let result = cadastro.ListAll();
-    res.render("formView", {vehicles: result})
+    res.render("listView", {vehicles: result})
 }
