@@ -14,9 +14,13 @@ module.exports = class CadastroModel {
         return this.vehicles;
     }
 
-    Delete(id) {
-        const index = this.vehicles.findIndex((x) => x.id == id);
+    Delete(name) {
+        const index = this.vehicles.findIndex((x) => x.name == name);
         this.vehicles.splice(index, 1);
+    }
+
+    Edit() {
+        document.getElementById("nome_veiculo").innerText = "Teste"
     }
     
 }

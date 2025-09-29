@@ -22,3 +22,9 @@ exports.Delete = (req,res) => {
     let result = cadastro.ListAll();
     res.render("listView", {vehicles: result})
 }
+
+exports.Edit = (req,res) => {
+    cadastro.Edit();
+    let result = cadastro.ListAll();
+    res.render("listView", {vehicles: result})
+}
