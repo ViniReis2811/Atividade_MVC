@@ -27,7 +27,6 @@
                     <th scope="row"><%= i+1 %></th>
                     <td id="nome_veiculo"><%= vehicles[i].name %></td>
                     <td><a href="/delete/<%= vehicles[i].name%>" onclick="return confirm('Tem certeza que deseja excluir este veículo?');"><i class="fa-solid fa-trash"></a></i></td>               
-                    <td><a href="/edit/<%= vehicles[i].name%>" onclick=""><i class="fa-solid fa-trash"></a></i></td>               
                   </tr>
               <% } %>
         </tbody>
